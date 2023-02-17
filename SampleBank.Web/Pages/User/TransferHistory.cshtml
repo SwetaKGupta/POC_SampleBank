@@ -1,0 +1,29 @@
+﻿@page
+@model SampleBank.Web.Pages.User.TransferHistoryModel
+@{
+}
+<a class="btn btn-secondary" asp-area="" asp-page="/Index">Back to Home</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Transaction Id</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Source Account</th>
+            <th scope="col">Destination Account</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model.Transactions)
+        {
+            <tr>
+                <th scope="row"><a asp-page="TransferDetail" asp-route-transactionId="@transaction.TransactionId">@transaction.TransactionId</a> </th>
+                <td>@transaction.Amount</td>
+                <td>@transaction.SourceAccountNumber</td>
+                <td>@transaction.DestinationAccountNumber</td>
+                <td>@transaction.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

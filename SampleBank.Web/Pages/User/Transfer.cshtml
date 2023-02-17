@@ -1,0 +1,29 @@
+﻿@page
+@model SampleBank.Web.Pages.User.TransferModel
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-8">        
+        <a class="btn btn-secondary" asp-area="" asp-page="/Index"><- Back</a>
+        <form id="registerForm" method="post">
+
+            <h2>Transfer Fund</h2>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+
+            <div class="form-floating">
+                <input asp-for="TransferData.Amount" class="form-control" aria-required="true" />
+                <label asp-for="TransferData.Amount"></label>
+            </div>
+
+            <div class="form-floating">
+                <input asp-for="TransferData.ToBankAccountNo" class="form-control" aria-required="true" />
+                <label asp-for="TransferData.ToBankAccountNo"></label>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success" style="margin-top:10px;">Transfer</button>
+        </form>
+    </div>
+</div>

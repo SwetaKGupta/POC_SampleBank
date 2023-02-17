@@ -1,0 +1,15 @@
+﻿@page "{transactionId}"
+@model SampleBank.Web.Pages.User.TransferDetailModel
+@{
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">TransactionId : @Model.Transaction.TransactionId</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Source Account Number : @Model.Transaction.FromAccount</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Destination Account Number : @Model.Transaction.ToAccount</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Amount : $@Model.Transaction.Amount</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Type : @Model.Transaction.Type</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Date : @Model.Transaction.Date</h6>
+    </div>
+</div>
